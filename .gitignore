@@ -7,3 +7,4 @@ __pycache__/
 .venv/
 robotframework_hashlibrary.egg-info/
 HashLibrary.egg-info
+dist/
