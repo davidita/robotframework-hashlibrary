@@ -8,3 +8,4 @@ __pycache__/
 robotframework_hashlibrary.egg-info/
 HashLibrary.egg-info
 dist/
+**/build
