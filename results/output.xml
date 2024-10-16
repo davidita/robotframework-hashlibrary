@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.5 on darwin)" generated="2024-10-16T14:54:47.742774" rpa="false" schemaversion="5">
+<suite id="s1" name="Robotframework-Hashlibrary" source="/Users/daviditaliander/Downloads/robotframework-hashlibrary">
+<suite id="s1-s1" name="Atest" source="/Users/daviditaliander/Downloads/robotframework-hashlibrary/atest">
+<suite id="s1-s1-s1" name="Atest" source="/Users/daviditaliander/Downloads/robotframework-hashlibrary/atest/atest.robot">
+<test id="s1-s1-s1-t1" name="String with only letters" line="12">
+<kw name="Get Base64 Hash From String" owner="HashLibrary">
+<msg time="2024-10-16T14:54:47.757515" level="INFO">ZGF2aWQ=</msg>
+<msg time="2024-10-16T14:54:47.757601" level="INFO">${hash} = ZGF2aWQ=</msg>
+<var>${hash}</var>
+<arg>${string_letters}</arg>
+<doc>Returns the base64 hash of the string that is supplied. </doc>
+<status status="PASS" start="2024-10-16T14:54:47.757335" elapsed="0.000312"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${hash}</arg>
+<arg>ZGF2aWQ=</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-16T14:54:47.757776" elapsed="0.000143"/>
+</kw>
+<status status="PASS" start="2024-10-16T14:54:47.756744" elapsed="0.001263"/>
+</test>
+<test id="s1-s1-s1-t2" name="String with only numbers" line="16">
+<kw name="Get Base64 Hash From String" owner="HashLibrary">
+<msg time="2024-10-16T14:54:47.758620" level="INFO">MTIzNDU=</msg>
+<msg time="2024-10-16T14:54:47.758688" level="INFO">${hash} = MTIzNDU=</msg>
+<var>${hash}</var>
+<arg>${string_numbers}</arg>
+<doc>Returns the base64 hash of the string that is supplied. </doc>
+<status status="PASS" start="2024-10-16T14:54:47.758496" elapsed="0.000225"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${hash}</arg>
+<arg>MTIzNDU=</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-16T14:54:47.758810" elapsed="0.000142"/>
+</kw>
+<status status="PASS" start="2024-10-16T14:54:47.758196" elapsed="0.000840"/>
+</test>
+<test id="s1-s1-s1-t3" name="String combined" line="20">
+<kw name="Get Base64 Hash From String" owner="HashLibrary">
+<msg time="2024-10-16T14:54:47.759407" level="INFO">ZGF2aWQxMjM0NQ==</msg>
+<msg time="2024-10-16T14:54:47.759463" level="INFO">${hash} = ZGF2aWQxMjM0NQ==</msg>
+<var>${hash}</var>
+<arg>${string_combined}</arg>
+<doc>Returns the base64 hash of the string that is supplied. </doc>
+<status status="PASS" start="2024-10-16T14:54:47.759323" elapsed="0.000172"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${hash}</arg>
+<arg>ZGF2aWQxMjM0NQ==</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-16T14:54:47.759570" elapsed="0.000258"/>
+</kw>
+<status status="PASS" start="2024-10-16T14:54:47.759161" elapsed="0.000761"/>
+</test>
+<test id="s1-s1-s1-t4" name="String diacritic" line="24">
+<kw name="Get Base64 Hash From String" owner="HashLibrary">
+<msg time="2024-10-16T14:54:47.760727" level="INFO">ZMOkdmlk</msg>
+<msg time="2024-10-16T14:54:47.760794" level="INFO">${hash} = ZMOkdmlk</msg>
+<var>${hash}</var>
+<arg>${string_diacritic}</arg>
+<doc>Returns the base64 hash of the string that is supplied. </doc>
+<status status="PASS" start="2024-10-16T14:54:47.760599" elapsed="0.000229"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${hash}</arg>
+<arg>ZMOkdmlk</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-16T14:54:47.761025" elapsed="0.000191"/>
+</kw>
+<status status="PASS" start="2024-10-16T14:54:47.760201" elapsed="0.001131"/>
+</test>
+<status status="PASS" start="2024-10-16T14:54:47.752720" elapsed="0.009072"/>
+</suite>
+<status status="PASS" start="2024-10-16T14:54:47.752128" elapsed="0.010112"/>
+</suite>
+<status status="PASS" start="2024-10-16T14:54:47.744620" elapsed="0.018216"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Robotframework-Hashlibrary">Robotframework-Hashlibrary</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="Atest">Robotframework-Hashlibrary.Atest</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1-s1" name="Atest">Robotframework-Hashlibrary.Atest.Atest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
