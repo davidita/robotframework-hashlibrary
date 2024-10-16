@@ -1,8 +1,0 @@
-setup.py
-HashLibrary/HashLibrary.py
-HashLibrary/__init__.py
-HashLibrary.egg-info/PKG-INFO
-HashLibrary.egg-info/SOURCES.txt
-HashLibrary.egg-info/dependency_links.txt
-HashLibrary.egg-info/requires.txt
-HashLibrary.egg-info/top_level.txt
