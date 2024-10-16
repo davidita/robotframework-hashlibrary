@@ -1,0 +1,9 @@
+results/
+log.html
+report.html
+output.xml
+__pycache__/
+.pytest_cache
+.venv/
+robotframework_hashlibrary.egg-info/
+HashLibrary.egg-info
