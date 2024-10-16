@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='robotframework-hashlibrary',
     version='0.1',
-    description='Een simpele Robot Framework library',
+    description='Robot Framework library that generates hashes based on the given input',
     author='David Italiander',
     author_email='david.italiander@gmail.com',
     packages=find_packages(),
