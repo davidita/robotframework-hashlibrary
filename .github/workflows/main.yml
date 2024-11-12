@@ -1,0 +1,43 @@
+name: Run Robot Framework Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      # Definieer een containeromgeving voor de tests
+      testcontainer:
+        image: python:3.10
+        options: --entrypoint /bin/sh
+        volumes:
+          - ${{ github.workspace }}:/workspace
+        env:
+          PYTHONPATH: /workspace
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: |
+          pip install robotframework
+          pip install -r requirements.txt
+
+      - name: Run Pytest Unit Tests
+        run: |
+          pytest /workspace/robotframework-hashlibrary/utest/utest.robot  # Pas het pad aan naar de locatie van je unit tests
+      
+      - name: Run Robot Framework Tests
+        run: |
+          robot /workspace/robotframework-hashlibrary/atest/atest.robot
