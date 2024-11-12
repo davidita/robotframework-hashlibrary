@@ -38,8 +38,8 @@ jobs:
 
       - name: Run Pytest Unit Tests
         run: |
-          pytest /workspace/robotframework-hashlibrary/utest/utest.robot  # Pas het pad aan naar de locatie van je unit tests
+          pytest utest/utest.robot
       
       - name: Run Robot Framework Tests
         run: |
-          robot /workspace/robotframework-hashlibrary/atest/atest.robot
+          robot atest/atest.robot
