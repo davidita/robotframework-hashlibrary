@@ -38,7 +38,7 @@ jobs:
 
       - name: Run Pytest Unit Tests
         run: |
-          pytest ${{ github.workspace }}/utest/utest.robot
+          pytest ${{ github.workspace }}/utest/test_hashlibrary.py
       
       - name: Run Robot Framework Tests
         run: |
