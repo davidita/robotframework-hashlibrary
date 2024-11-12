@@ -9,18 +9,34 @@ ${string_combined}    david12345
 ${string_diacritic}    dävid
 
 *** Test Cases ***
-String with only letters
+Base64 - String with only letters
     ${hash}    Get Base64 Hash From String    ${string_letters}
     Should Be Equal    ${hash}    ZGF2aWQ=
 
-String with only numbers
+Base64 - String with only numbers
     ${hash}    Get Base64 Hash From String    ${string_numbers}
     Should Be Equal    ${hash}    MTIzNDU=
 
-String combined
+Base64 - String combined
     ${hash}    Get Base64 Hash From String    ${string_combined}
     Should Be Equal    ${hash}    ZGF2aWQxMjM0NQ==
 
-String diacritic
+Base64 - String diacritic
     ${hash}    Get Base64 Hash From String    ${string_diacritic}
     Should Be Equal    ${hash}    ZMOkdmlk
+
+CRC-32 - String with only letters
+    ${hash}    Get Crc32 Hash From String    ${string_letters}
+    Should Be Equal    ${hash}    0x8796d7bb
+
+CRC-32 - String with only numbers
+    ${hash}    Get Crc32 Hash From String    ${string_numbers}
+    Should Be Equal    ${hash}    0xcbf53a1c
+
+CRC-32 - String combined
+    ${hash}    Get Crc32 Hash From String    ${string_combined}
+    Should Be Equal    ${hash}    0x9a3d48f7
+
+CRC-32 - String diacritic
+    ${hash}    Get Crc32 Hash From String    ${string_diacritic}
+    Should Be Equal    ${hash}    0xe08791fb
