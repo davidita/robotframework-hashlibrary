@@ -49,3 +49,23 @@ def test_crc32_hash_diacritic():
     hash_crc32 = hash_lib.get_crc32_hash_from_string(string_diacritic)
     assert hash_crc32 == "0xe08791fb"
     print(hash_crc32)
+
+def test_md5_hash_letters():
+    hash_md5 = hash_lib.get_md5_hash_from_string(string_letters)
+    assert hash_md5 == "172522ec1028ab781d9dfd17eaca4427"
+    print(hash_md5)
+
+def test_md5_hash_numbers():
+    hash_md5 = hash_lib.get_md5_hash_from_string(string_numbers)
+    assert hash_md5 == "827ccb0eea8a706c4c34a16891f84e7b"
+    print(hash_md5)
+
+def test_md5_hash_combined():
+    hash_md5 = hash_lib.get_md5_hash_from_string(string_combined)
+    assert hash_md5 == "0944987d6bbf31cf3ffcd1ee0ba828b6"
+    print(hash_md5)
+
+def test_md5_hash_diacritic():
+    hash_md5 = hash_lib.get_md5_hash_from_string(string_diacritic)
+    assert hash_md5 == "dfaf70eb8ae4ff763918f6917eb28f2b"
+    print(hash_md5)

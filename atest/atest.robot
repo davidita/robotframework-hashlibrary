@@ -40,3 +40,19 @@ CRC-32 - String combined
 CRC-32 - String diacritic
     ${hash}    Get Crc32 Hash From String    ${string_diacritic}
     Should Be Equal    ${hash}    0xe08791fb
+
+MD5 - String with only letters
+    ${hash}    Get md5 Hash From String    ${string_letters}
+    Should Be Equal    ${hash}    172522ec1028ab781d9dfd17eaca4427
+
+MD5 - String with only numbers
+    ${hash}    Get md5 Hash From String    ${string_numbers}
+    Should Be Equal    ${hash}    827ccb0eea8a706c4c34a16891f84e7b
+
+MD5 - String combined
+    ${hash}    Get md5 Hash From String    ${string_combined}
+    Should Be Equal    ${hash}    0944987d6bbf31cf3ffcd1ee0ba828b6
+
+MD5 - String diacritic
+    ${hash}    Get md5 Hash From String    ${string_diacritic}
+    Should Be Equal    ${hash}    dfaf70eb8ae4ff763918f6917eb28f2b

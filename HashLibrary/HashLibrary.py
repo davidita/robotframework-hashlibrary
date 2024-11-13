@@ -1,5 +1,6 @@
 import base64
 import binascii
+import hashlib
 
 class HashLibrary:
     """This is a Robot Framework library to create base64 hashes from strings.
@@ -26,3 +27,15 @@ class HashLibrary:
         string_in_bytes = string.encode('utf-8')
         crc32_bytes = binascii.crc32(string_in_bytes)
         return hex(crc32_bytes)
+
+    def get_md5_hash_from_string(self, string):
+        """Returns the md5 hash of the string that is supplied.
+        
+        Example:
+            | ${hash} | Get md5 Hash From String | david |
+        """
+        data = string
+        md5_hash = hashlib.md5()
+        md5_hash.update(data.encode('utf-8'))
+        hash_result = md5_hash.hexdigest()
+        return(hash_result)
