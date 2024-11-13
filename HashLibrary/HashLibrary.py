@@ -39,3 +39,15 @@ class HashLibrary:
         md5_hash.update(data.encode('utf-8'))
         hash_result = md5_hash.hexdigest()
         return(hash_result)
+    
+    def get_sha256_hash_from_string(self, string):
+        """Returns the md5 hash of the string that is supplied.
+        
+        Example:
+            | ${hash} | Get md5 Hash From String | david |
+        """
+        data = string
+        sha256_hash = hashlib.sha256()
+        sha256_hash.update(data.encode('utf-8'))
+        hash_result = sha256_hash.hexdigest()
+        return(hash_result)

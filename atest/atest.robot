@@ -56,3 +56,19 @@ MD5 - String combined
 MD5 - String diacritic
     ${hash}    Get md5 Hash From String    ${string_diacritic}
     Should Be Equal    ${hash}    dfaf70eb8ae4ff763918f6917eb28f2b
+
+sha256 - String with only letters
+    ${hash}    Get sha256 Hash From String    ${string_letters}
+    Should Be Equal    ${hash}    07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e
+
+sha256 - String with only numbers
+    ${hash}    Get sha256 Hash From String    ${string_numbers}
+    Should Be Equal    ${hash}    5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5
+
+sha256 - String combined
+    ${hash}    Get sha256 Hash From String    ${string_combined}
+    Should Be Equal    ${hash}    a74ccf7b011ad204882b593076d070907a12b89b6251bd14fca52b346b01c8d2
+
+sha256 - String diacritic
+    ${hash}    Get sha256 Hash From String    ${string_diacritic}
+    Should Be Equal    ${hash}    8900f1db225e5f785a11b25263efb416432ef5327a467690a6b411706cbf3ee4

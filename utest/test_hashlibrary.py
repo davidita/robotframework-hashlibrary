@@ -69,3 +69,23 @@ def test_md5_hash_diacritic():
     hash_md5 = hash_lib.get_md5_hash_from_string(string_diacritic)
     assert hash_md5 == "dfaf70eb8ae4ff763918f6917eb28f2b"
     print(hash_md5)
+
+def test_sha256_hash_letters():
+    hash_sha256 = hash_lib.get_sha256_hash_from_string(string_letters)
+    assert hash_sha256 == "07d046d5fac12b3f82daf5035b9aae86db5adc8275ebfbf05ec83005a4a8ba3e"
+    print(hash_sha256)
+
+def test_sha256_hash_numbers():
+    hash_sha256 = hash_lib.get_sha256_hash_from_string(string_numbers)
+    assert hash_sha256 == "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"
+    print(hash_sha256)
+
+def test_sha256_hash_combined():
+    hash_sha256 = hash_lib.get_sha256_hash_from_string(string_combined)
+    assert hash_sha256 == "a74ccf7b011ad204882b593076d070907a12b89b6251bd14fca52b346b01c8d2"
+    print(hash_sha256)
+
+def test_sha256_hash_diacritic():
+    hash_sha256 = hash_lib.get_sha256_hash_from_string(string_diacritic)
+    assert hash_sha256 == "8900f1db225e5f785a11b25263efb416432ef5327a467690a6b411706cbf3ee4"
+    print(hash_sha256)
