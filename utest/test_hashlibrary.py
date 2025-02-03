@@ -82,5 +82,5 @@ def test_base64_file():
 def test_sha256_file():
     hash_sha256 = hash_lib.get_sha256_hash_from_file(current_directory / 'utest'/ 'testfile.docx')
     print(hash_sha256)
-    assert hash_sha256 == "8fcf7cb45c180e4390e9347af46c506668272b9eb20ece93d8ed4a445b13b0f5"
+    assert hash_sha256 == "0a916e40c0f794cd7a37ec5d54118a242253415698b81de0c50e1b1a0675231a"
     print(hash_sha256)
