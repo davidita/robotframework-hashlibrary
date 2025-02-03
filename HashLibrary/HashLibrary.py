@@ -57,7 +57,7 @@ class HashLibrary:
             raise Exception(f"An error occurred: {str(e)}")
         
     def get_sha256_hash_from_file(self, filepath):
-        """Returns the base64 hash of the file that is supplied.
+        """Returns the sha256 hash of the file that is supplied.
         
         Example:
             | ${hash} | Get sha256 Hash From File | path/to/file.txt |
