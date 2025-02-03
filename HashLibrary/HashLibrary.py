@@ -57,11 +57,15 @@ class HashLibrary:
             raise Exception(f"An error occurred: {str(e)}")
         
     def get_sha256_hash_from_file(self, filepath):
-        """Bereken de SHA-256 hash van een bestand."""
+        """Returns the base64 hash of the file that is supplied.
+        
+        Example:
+            | ${hash} | Get sha256 Hash From File | path/to/file.txt |
+        """
         sha256 = hashlib.sha256()
     
         with open(filepath, "rb") as f:
-            while chunk := f.read(8192):  # Lees het bestand in stukken van 8KB
+            while chunk := f.read(8192):  # Read file in chucks of 8kb
                 sha256.update(chunk)
 
         return sha256.hexdigest()
