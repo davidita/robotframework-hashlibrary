@@ -29,7 +29,7 @@ class HashLibrary:
         return hex(crc32_bytes)
 
     def get_md5_hash_from_string(self, string):
-        """Returns the md5 hash of the string that is supplied.
+        """Returns the md5 hash of the string that is supplied. 
         
         Example:
             | ${hash} | Get md5 Hash From String | david |
