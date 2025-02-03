@@ -39,3 +39,29 @@ class HashLibrary:
         md5_hash.update(data.encode('utf-8'))
         hash_result = md5_hash.hexdigest()
         return(hash_result)
+    
+    def get_base64_hash_from_file(self, file_path):
+        """Returns the base64 hash of the file that is supplied.
+        
+        Example:
+            | ${hash} | Get Base64 Hash From File | path/to/file.txt |
+        """
+        try:
+            with open(file_path, 'rb') as file:
+                base64_encoded = base64.b64encode(file.read()).decode('utf-8')
+            print(base64_encoded)
+            return base64_encoded
+        except FileNotFoundError:
+            raise FileNotFoundError(f"File not found: {file_path}")
+        except Exception as e:
+            raise Exception(f"An error occurred: {str(e)}")
+        
+    def get_sha256_hash_from_file(self, filepath):
+        """Bereken de SHA-256 hash van een bestand."""
+        sha256 = hashlib.sha256()
+    
+        with open(filepath, "rb") as f:
+            while chunk := f.read(8192):  # Lees het bestand in stukken van 8KB
+                sha256.update(chunk)
+
+        return sha256.hexdigest()

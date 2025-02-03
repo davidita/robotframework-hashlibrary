@@ -56,3 +56,11 @@ MD5 - String combined
 MD5 - String diacritic
     ${hash}    Get md5 Hash From String    ${string_diacritic}
     Should Be Equal    ${hash}    dfaf70eb8ae4ff763918f6917eb28f2b
+
+Base64 - File
+    ${hash}    Get Base64 Hash From File    ${CURDIR}/testfile.docx
+    Should Be Equal    ${hash}    DQpMb3JlbSBpcHN1bSBkb2xvciBzaXQgYW1ldC4gUXVvIHRvdGFtIHZvbHVwdGFzIHV0IHZvbHVwdGF0ZW0gcmVwdWRpYW5kYWUgaW4gZXhwbGljYWJvIHRvdGFtIHV0IHZvbHVwdGF0ZW0gdm9sdXB0YXRlbSBzaXQgYXBlcmlhbSBlbmltIGV0IHZlbGl0IGxhYm9ydW0uIEVvcyByZXBlbGxhdCBtaW5pbWEgZXN0IHJlcnVtIHZpdGFlIHV0IFF1aXMgaGFydW0gZXN0IHNhcGllbnRlIGFsaXF1YW0gYXV0IHJlaWNpZW5kaXMgbnVtcXVhbSBxdWkgbWFnbmFtIHJhdGlvbmUuIFZlbCBtYWlvcmVzIGFwZXJpYW0gYXV0IGxhYm9ydW0gcG9zc2ltdXMgcXVvIGl0YXF1ZSBjb21tb2RpLiBWZWwgdm9sdXB0YXRlbSBkb2xvcnVtIGlkIGZ1Z2lhdCBxdWFtIGV0IHZvbHVwdGF0ZW0gdm9sdXB0YXRpYnVzIGEgZW5pbSBmYWNlcmUuDQoNCkVzdCBwZXJzcGljaWF0aXMgdm9sdXB0YXMgdXQgdG90YW0gZXhwZWRpdGEgaW4gbmVtbyBkZWJpdGlzLiBFdCBwYXJpYXR1ciBlc3NlIGF1dCBhcmNoaXRlY3RvIGxpYmVybyBlc3QgZXJyb3IgZnVnYSBxdWkgZW5pbSBibGFuZGl0aWlzIHF1aSBudWxsYSBuaWhpbCBzaXQgcG9zc2ltdXMgbmVjZXNzaXRhdGlidXMuIEV0IG1vZGkgcXVhcyB1dCBzaW50IG1vbGVzdGlhZSBldCBleGVyY2l0YXRpb25lbSBhbGlhcyBpZCBxdWlhIHZlbmlhbSBldW0gZG9sb3JlbXF1ZSBuYXR1cyBldCBvZmZpY2lpcyBlaXVzIGEgbW9sZXN0aWFlIGl0YXF1ZS4NCg0KRXN0IGxpYmVybyBmYWNpbGlzIGFiIHF1aXNxdWFtIGZ1Z2lhdCBoaWMgaWxsbyBxdW9zISBFdCBhbWV0IGRvbG9yIGV0IGl1cmUgbW9sbGl0aWEgYWQgYWxpYXMgbW9kaSBhIGFyY2hpdGVjdG8gc2ludCB2ZWwgaXBzYW0gc2ltaWxpcXVlIGV0IHN1c2NpcGl0IGFjY3VzYW50aXVtLg0K
+
+Sha256 - File
+    ${hash}    Get Sha256 Hash From File    ${CURDIR}/testfile.docx
+    Should Be Equal    ${hash}    8fcf7cb45c180e4390e9347af46c506668272b9eb20ece93d8ed4a445b13b0f5
