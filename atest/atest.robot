@@ -64,3 +64,27 @@ Base64 - File
 Sha256 - File
     ${hash}    Get Sha256 Hash From File    ${CURDIR}/testfile.docx
     Should Be Equal    ${hash}    0a916e40c0f794cd7a37ec5d54118a242253415698b81de0c50e1b1a0675231a
+
+MD5 - File
+    ${hash}    Get md5 Hash From File    ${CURDIR}/testfile.docx
+    Should Be Equal    ${hash}    342d948dbfbebb56b93792c359ae985f
+
+CRC-32 - File
+    ${hash}    Get Crc32 Hash From File    ${CURDIR}/testfile.docx
+    Should Be Equal    ${hash}    0x63b0c776
+
+Base64 - File Not Found
+    [Documentation]    Test for FileNotFoundError when file is not found
+    Run Keyword And Expect Error    FileNotFoundError: File not found: ${CURDIR}/non_existent_file.txt    Get Base64 Hash From File    ${CURDIR}/non_existent_file.txt
+
+Sha256 - File Not Found
+    [Documentation]    Test for FileNotFoundError when file is not found
+    Run Keyword And Expect Error    FileNotFoundError: File not found: ${CURDIR}/non_existent_file.txt    Get Sha256 Hash From File    ${CURDIR}/non_existent_file.txt
+
+MD5 - File Not Found
+    [Documentation]    Test for FileNotFoundError when file is not found
+    Run Keyword And Expect Error    FileNotFoundError: File not found: ${CURDIR}/non_existent_file.txt    Get md5 Hash From File    ${CURDIR}/non_existent_file.txt
+
+CRC-32 - File Not Found
+    [Documentation]    Test for FileNotFoundError when file is not found
+    Run Keyword And Expect Error    FileNotFoundError: File not found: ${CURDIR}/non_existent_file.txt    Get Crc32 Hash From File    ${CURDIR}/non_existent_file.txt
